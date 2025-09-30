@@ -8,6 +8,11 @@ or
 
 conda create -p PATH python=3.10
 
+## Install packages
+conda install jupyter
+
+conda install scikit-learn
+
 ## Export conda environment
 conda env export > environment.yml
 
