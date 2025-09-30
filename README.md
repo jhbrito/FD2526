@@ -2,11 +2,11 @@
 MEEC FD 2025/2026
 
 ## Create conda environment
-conda create -n FD2526Env310 -python=3.10
+conda create -n FD2526Env311 -python=3.11
 
 or
 
-conda create -p PATH python=3.10
+conda create -p PATH python=3.11
 
 ## Install packages
 conda install jupyter
