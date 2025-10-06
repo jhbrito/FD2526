@@ -11,7 +11,11 @@ conda create -p PATH python=3.11
 ## Install packages
 conda install jupyter
 
-conda install matplotlib
+conda install matplotlib 
+
+conda install pandas openpyxl
+
+conda install tqdm numba
 
 conda install scikit-learn
 
