@@ -2,7 +2,7 @@ import cv2 as cv2
 import os
 
 folder = "Files"
-img = cv2.imread(os.path.join(folder, "moedas.jpg"))
+img = cv2.imread(os.path.join(folder, "coins.jpg"))
 window_name = "Moedas"
 cv2.namedWindow(window_name)
 cv2.imshow("Moedas", img)
