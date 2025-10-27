@@ -2,7 +2,7 @@ import cv2 as cv2
 import os
 import numpy as np
 
-folder = "Files"
+folder = "../Files"
 img = cv2.imread(os.path.join(folder, "building.jpg"))
 window_name = "Building"
 cv2.namedWindow(window_name)

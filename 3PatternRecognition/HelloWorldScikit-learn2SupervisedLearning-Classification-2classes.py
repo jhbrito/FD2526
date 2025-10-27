@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC, NuSVC
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn import metrics
@@ -14,12 +14,12 @@ np.random.seed(1)
 n_samples_per_class = 100
 
 class0_x0_mean = 10.0
-class0_x0_std = 2.0
+class0_x0_std = 5.0
 class0_x1_mean = 20.0
 class0_x1_std = 2.0
 
 class1_x0_mean = 20.0
-class1_x0_std = 2.0
+class1_x0_std = 5.0
 class1_x1_mean = 10.0
 class1_x1_std = 2.0
 
@@ -60,9 +60,9 @@ ax.set_title("Split Data")
 # plt.show()
 # plt.close(fig)
 
-model = LinearSVC()
+# model = LinearSVC()
 # model = KNeighborsClassifier()
-# model = DecisionTreeClassifier()
+model = DecisionTreeClassifier()
 # model = RandomForestClassifier()
 # model = AdaBoostClassifier()
 # model = MLPClassifier()
@@ -82,6 +82,10 @@ ax.set_title("Predicted Classes")
 
 plt.show()
 plt.close(fig)
+
+if type(model) == DecisionTreeClassifier:
+    plot_tree(model)
+    plt.show()
 
 cm = metrics.confusion_matrix(Y_test, Y_predict, labels=[0, 1])
 print("Confusion Matrix:")
