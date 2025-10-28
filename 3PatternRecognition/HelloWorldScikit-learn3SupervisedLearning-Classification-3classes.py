@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier, plot_tree
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn import metrics
@@ -97,6 +97,10 @@ ax.set_title("Predicted Classes")
 
 plt.show()
 plt.close(fig)
+
+if type(model) == DecisionTreeClassifier:
+    plot_tree(model)
+    plt.show()
 
 cm = metrics.confusion_matrix(Y_test, Y_predict, labels=[0, 1, 2])
 print("Confusion Matrix:")
