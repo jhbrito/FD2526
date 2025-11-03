@@ -41,6 +41,11 @@ pip install "tensorflow<2.11"
 python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
 ```
 
+## Install packages for embedded devices
+```
+pip install everywhereml micromlgen embedded_window eloquent_tensorflow
+```
+
 ## Export conda environment
 ```
 conda env export > environment.yml
