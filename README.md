@@ -8,7 +8,7 @@ conda create -n FD2526Env310 python=3.10
 
 or
 ```
-conda create -p PATH python=3.11
+conda create -p PATH python=3.10
 ```
 
 ```
